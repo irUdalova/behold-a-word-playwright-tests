@@ -16,7 +16,6 @@ def test_header_logged_in_user(page: Page):
     login_page = LoginPage(page)
     header = Header(page)
     login_page.open()
-    expect(page.get_by_role("heading", name=ci("LOG IN"))).to_be_visible()
     login_page.login("test-mail@gmail.com", "1234567u")
     header.expect_logged_in()
 

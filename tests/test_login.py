@@ -12,7 +12,7 @@ def test_user_can_login(login_page: LoginPage, page: Page):
     expect(page).to_have_url(re.compile(r"/?$"))
 
 
-# Negative cases
+# negative cases
 @pytest.mark.parametrize(
     "email,password,error_text,error_type",
     [

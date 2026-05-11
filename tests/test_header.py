@@ -7,12 +7,14 @@ from components.header import Header
 
 
 def test_header_guest_user(page: Page):
+    # use fixture
     home = HomePage(page)
     home.open()
     home.header.expect_logged_out()
 
 
 def test_header_logged_in_user(page: Page):
+    # use fixture
     login_page = LoginPage(page)
     header = Header(page)
     login_page.open()
@@ -21,6 +23,7 @@ def test_header_logged_in_user(page: Page):
 
 
 def test_header_after_logout(page: Page):
+    # use fixture
     login_page = LoginPage(page)
     header = Header(page)
     login_page.open()
@@ -32,6 +35,7 @@ def test_header_after_logout(page: Page):
 
 
 def test_header_explore_link_navigates_to_explore(page: Page):
+    # use fixture
     home = HomePage(page)
     home.open()
     expect(home.header.link("EXPLORE")).to_be_visible()

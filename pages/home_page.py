@@ -19,6 +19,7 @@ class HomePage:
         self.hero_explore_button().click()
 
     def random_word(self):
+        # CSS selectors are a fallback option and should only be used as a last resort. I don't think that's the case here.
         return self.page.locator("section.random-word").get_by_role("link")
 
     def go_to_random_word(self):

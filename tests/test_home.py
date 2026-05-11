@@ -13,6 +13,7 @@ def test_home_page_loads_successfully(page: Page):
 
 
 def test_hero_explore_button_navigates_to_explore(page: Page):
+    # use fixture
     home = HomePage(page)
     home.open()
     expect(home.hero_explore_button()).to_be_visible()
@@ -36,7 +37,9 @@ def test_popular_words_are_displayed(page: Page):
     home = HomePage(page)
     home.open()
     top_favorites = home.top_favorites()
+    # there are 3 items
     expect(top_favorites).to_have_count(3)
+    # You know, there are only three of them
     count = top_favorites.count()
     for i in range(count):
         expect(top_favorites.nth(i)).to_be_visible()

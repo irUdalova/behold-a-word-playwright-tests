@@ -1,6 +1,10 @@
 # QA Automation Project
 
-Automated UI testing project for the "Behold-a-Word" web application using Playwright and Pytest.
+Automated UI testing project for the Behold-a-Word web application using Playwright and Pytest.
+
+The goal of this project was to practice QA automation fundamentals, including test structure, Page Object Model, reusable components, parametrized testing, and working with dynamic test data.
+
+The project focuses on core user flows rather than full application coverage.
 
 ## Tech Stack
 
@@ -27,7 +31,3 @@ playwright install
 ```bash
 pytest
 ```
-
-## Status
-
-Project setup in progress. Test cases will be added step by step in upcoming commits.
